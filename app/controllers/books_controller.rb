@@ -1,14 +1,16 @@
 class BooksController < ApplicationController
   
-  def index
+  def index #一覧
+    @books = Book.all  
   end
   
-  def show
+  def show  #詳細
   end
 
-  def edit
+  def edit  #編集
   end
 
-  def new
+  def new #新規
+    
   end
 end
