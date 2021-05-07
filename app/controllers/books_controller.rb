@@ -11,6 +11,7 @@ class BooksController < ApplicationController
   end
 
   def new #新規
-    
+    @book = Book.new
   end
+  
 end
