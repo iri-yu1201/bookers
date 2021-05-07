@@ -2,7 +2,7 @@ class BooksController < ApplicationController
 
   def index #一覧
     @books = Book.all
-    @book = Book.new
+    #@book = Book.new
   end
 
   def show  #詳細
@@ -18,7 +18,10 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save
-    redirect_to '/show'
+    redirect_to book_path(book.id)
+  end
+  
+  def destroy
   end
 
   private
