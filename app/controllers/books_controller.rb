@@ -2,26 +2,33 @@ class BooksController < ApplicationController
 
   def index #一覧
     @books = Book.all
-    #@book = Book.new
-  end
-
-  def show  #詳細
-  end
-
-  def edit  #編集
-  end
-
-  def new #新規
     @book = Book.new
   end
-
+  
   def create
     book = Book.new(book_params)
     book.save
     redirect_to book_path(book.id)
   end
+
+  def show  #詳細
+    @book = Book.find(params[:id])
+  end
+
+  def edit  #編集
+    @book = Book.find(params[:id])
+  end
+  
+  def update
+  end
+
+  #def new #新規
+  #end
   
   def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to books_path
   end
 
   private
