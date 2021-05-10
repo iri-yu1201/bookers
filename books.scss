@@ -1,0 +1,25 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+
+}
+
+body {
+  margin: 33px;
+  line-height: 18px;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
